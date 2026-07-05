@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const galleryGrid = document.getElementById('gallery-grid');
   
   if (galleryGrid) {
-    // Render all images
+    // Render all images ONCE
     const renderGallery = (data) => {
       galleryGrid.innerHTML = '';
       data.forEach(item => {
         const itemEl = document.createElement('div');
         itemEl.classList.add('gallery-item', item.category, 'reveal', 'fade-up');
+        itemEl.setAttribute('data-category', item.category);
         itemEl.innerHTML = `
           <div class="gallery-inner">
             <img src="${item.src}" alt="${item.title}" loading="lazy">
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="gallery-info">
                 <h3>${item.title}</h3>
                 <p>${item.desc}</p>
-                <button class="btn btn-outline lightbox-trigger" data-src="${item.src}">View Image</button>
+                <button class="btn btn-primary lightbox-trigger" data-src="${item.src}">View Image</button>
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryGrid.appendChild(itemEl);
       });
       
-      // Re-trigger reveal animation for newly added items
+      // Trigger initial reveal animation
       setTimeout(() => {
         const reveals = galleryGrid.querySelectorAll('.reveal');
         reveals.forEach(r => r.classList.add('active'));
@@ -61,13 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         
         const filterValue = btn.getAttribute('data-filter');
+        const allItems = galleryGrid.querySelectorAll('.gallery-item');
         
-        if (filterValue === 'all') {
-          renderGallery(galleryData);
-        } else {
-          const filtered = galleryData.filter(item => item.category === filterValue);
-          renderGallery(filtered);
-        }
+        allItems.forEach(item => {
+          if (filterValue === 'all') {
+            item.style.display = 'block';
+            setTimeout(() => item.style.opacity = '1', 50);
+          } else {
+            if (item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block';
+              setTimeout(() => item.style.opacity = '1', 50);
+            } else {
+              item.style.opacity = '0';
+              setTimeout(() => item.style.display = 'none', 300);
+            }
+          }
+        });
       });
     });
   }
@@ -86,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lightbox.id = 'lightbox';
       lightbox.classList.add('lightbox');
       lightbox.innerHTML = `
-        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <span id="lightbox-close" class="lightbox-close"><i class="fas fa-times"></i></span>
         <div class="lightbox-content">
           <img id="lightbox-img" src="" alt="Enlarged Image">
         </div>

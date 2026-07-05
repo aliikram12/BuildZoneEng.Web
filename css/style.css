@@ -169,8 +169,7 @@ header {
 }
 
 header.scrolled {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
+  background: var(--white);
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   padding: 1rem 0;
 }
@@ -315,10 +314,14 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.footer-logo img {
-  height: 80px;
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+  display: block;
   margin-bottom: 1.5rem;
-  filter: brightness(0) invert(1);
+  letter-spacing: 1px;
 }
 
 .footer-links li {
