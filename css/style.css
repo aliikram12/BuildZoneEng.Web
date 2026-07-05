@@ -358,11 +358,11 @@ header.scrolled .mobile-toggle {
 }
 
 /* ========== NEW SECTIONS (HOME PAGE) ========== */
-/* Working Process */
-.process-grid {
+/* Working Process Timeline */
+.process-grid.timeline {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 2rem;
   position: relative;
 }
 
@@ -384,6 +384,8 @@ header.scrolled .mobile-toggle {
   z-index: -1;
 }
 
+/* Hide line after 3rd and 6th step since they are at the end of the row */
+.process-step:nth-child(3n)::after,
 .process-step:last-child::after {
   display: none;
 }

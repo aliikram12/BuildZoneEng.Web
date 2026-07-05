@@ -90,6 +90,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ========== FAQ ACCORDION ========== */
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('i');
+      
+      // Close all other open answers
+      faqQuestions.forEach(q => {
+        if (q !== question) {
+          q.classList.remove('active');
+          q.nextElementSibling.style.maxHeight = null;
+          const otherIcon = q.querySelector('i');
+          if (otherIcon) {
+            otherIcon.classList.remove('fa-minus');
+            otherIcon.classList.add('fa-chevron-down');
+          }
+        }
+      });
+      
+      // Toggle current answer
+      question.classList.toggle('active');
+      
+      if (question.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-minus');
+      } else {
+        answer.style.maxHeight = null;
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-chevron-down');
+      }
+    });
+  });
+
   /* ========== DYNAMIC COPYRIGHT YEAR ========== */
   const yearSpan = document.getElementById('current-year');
   if (yearSpan) {

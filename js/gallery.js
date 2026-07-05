@@ -128,6 +128,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft') showPrevImage();
         if (e.key === 'ArrowRight') showNextImage();
       });
+
+      // Touch Swipe Support
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      lightbox.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      lightbox.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        if (!lightbox.classList.contains('active')) return;
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) showNextImage(); // Swipe left
+        if (touchEndX > touchStartX + swipeThreshold) showPrevImage(); // Swipe right
+      }
     }
   }
 
