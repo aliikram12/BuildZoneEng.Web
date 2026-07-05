@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Build Zone Engineering</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Data/Pictures/1 (5).jpeg') center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      margin-top: 80px;
+    }
+    
+    .service-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+    
+    .service-detail:nth-child(even) {
+      direction: rtl; /* simple way to alternate sides */
+    }
+    
+    .service-detail:nth-child(even) .service-content {
+      direction: ltr;
+    }
+
+    .service-img img {
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .service-content ul {
+      margin: 1.5rem 0;
+    }
+    
+    .service-content ul li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .service-content ul li i {
+      color: var(--secondary);
+    }
+
+    @media (max-width: 992px) {
+      .service-detail { grid-template-columns: 1fr; direction: ltr !important; }
+      .service-detail:nth-child(even) .service-content { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="Data/Logo/Logo.png" alt="Build Zone Engineering Logo">
+      </a>
+      
+      <div class="mobile-toggle" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="color: white;">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header reveal zoom-in">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Comprehensive engineering and construction solutions.</p>
+    </div>
+  </div>
+
+  <section class="services-full">
+    <div class="container">
+      
+      <!-- Service 1 -->
+      <div class="service-detail">
+        <div class="service-img reveal fade-right">
+          <img src="Data/Pictures/1 (6).jpeg" alt="Prefabricated Buildings">
+        </div>
+        <div class="service-content reveal fade-left delay-200">
+          <h2>Prefabricated Buildings</h2>
+          <p>We design, manufacture, and assemble high-quality prefabricated structures tailored to meet diverse residential, commercial, and industrial requirements. Our solutions ensure rapid deployment and structural integrity.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Quick Installation</li>
+            <li><i class="fas fa-check-circle"></i> Cost Effective</li>
+            <li><i class="fas fa-check-circle"></i> Eco-Friendly Materials</li>
+            <li><i class="fas fa-check-circle"></i> High Durability</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-detail">
+        <div class="service-img reveal fade-left">
+          <img src="Data/Pictures/1 (7).jpeg" alt="Pre-Engineered Buildings">
+        </div>
+        <div class="service-content reveal fade-right delay-200">
+          <h2>Pre-Engineered Buildings (PEB)</h2>
+          <p>Our PEBs are custom-engineered for heavy industrial usage. From massive warehouses to aviation hangars, we provide robust steel frameworks designed to withstand extreme conditions.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Custom Architectural Design</li>
+            <li><i class="fas fa-check-circle"></i> Wide Clear Spans</li>
+            <li><i class="fas fa-check-circle"></i> Minimal Maintenance</li>
+            <li><i class="fas fa-check-circle"></i> Energy Efficient Options</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-detail">
+        <div class="service-img reveal fade-right">
+          <img src="Data/Pictures/1 (8).jpeg" alt="Porta Cabins">
+        </div>
+        <div class="service-content reveal fade-left delay-200">
+          <h2>Porta Cabins & Office Containers</h2>
+          <p>Ideal for construction sites and remote locations, our porta cabins offer immediate, comfortable, and secure workspaces. Fully equipped with modern amenities.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Highly Mobile</li>
+            <li><i class="fas fa-check-circle"></i> Weather Resistant</li>
+            <li><i class="fas fa-check-circle"></i> Customizable Interiors</li>
+            <li><i class="fas fa-check-circle"></i> Plug & Play Utility Connections</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-detail">
+        <div class="service-img reveal fade-left">
+          <img src="Data/Pictures/1 (9).jpeg" alt="Steel Fabrication">
+        </div>
+        <div class="service-content reveal fade-right delay-200">
+          <h2>General Steel Structure Fabrication</h2>
+          <p>With a state-of-the-art facility, we handle complex custom steel fabrication for bridges, platforms, staircases, and heavy machinery supports.</p>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Precision Cutting & Welding</li>
+            <li><i class="fas fa-check-circle"></i> International Safety Standards</li>
+            <li><i class="fas fa-check-circle"></i> Heavy Lifting Capabilities</li>
+            <li><i class="fas fa-check-circle"></i> Anti-Corrosion Treatments</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline" style="color: var(--primary); border-color: var(--primary);">Request Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-widget">
+          <a href="index.html" class="footer-logo">
+            <img src="Data/Logo/Logo.png" alt="Build Zone Logo">
+          </a>
+          <p>Premium steel construction and prefabricated engineering solutions delivering excellence globally.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-widget">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="portfolio.html">Portfolio & Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--primary);"></i> Plot 5 Lahore Avenue, Near Valencia Town, Lahore</li>
+            <li><i class="fas fa-phone-alt" style="margin-right: 10px; color: var(--primary);"></i> 0300 1491901</li>
+            <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--primary);"></i> info@buildzone.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Build Zone Engineering (PVT) LTD. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923001491901" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+  <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

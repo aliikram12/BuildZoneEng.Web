@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Build Zone Engineering</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Data/Pictures/1 (2).jpeg') center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      margin-top: 80px; /* offset for fixed header */
+    }
+    
+    .about-story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-img img {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .mv-card {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      border-left: 5px solid var(--primary);
+    }
+    .mv-card h3 { color: var(--primary); margin-bottom: 1rem; }
+    
+    @media (max-width: 992px) {
+      .about-story, .mv-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (Same as Index, wait we should duplicate or use simple include, but vanilla HTML means duplication) -->
+  <header id="header" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="Data/Logo/Logo.png" alt="Build Zone Engineering Logo">
+      </a>
+      
+      <div class="mobile-toggle" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="color: white;">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header reveal zoom-in">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Discover the story behind our steel engineering excellence.</p>
+    </div>
+  </div>
+
+  <!-- Company Story -->
+  <section class="about-story-section">
+    <div class="container">
+      <div class="about-story">
+        <div class="about-content reveal fade-right">
+          <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+            <span>Our Journey</span>
+            <h2>Building Trust Since 2012</h2>
+          </div>
+          <p style="margin-bottom: 1.5rem;">
+            Build Zone Engineering (PVT) LTD was established with a singular vision by CEO Liaqat Ali: to revolutionize the steel construction and prefabricated building industry in Pakistan and beyond.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            Over the years, we have grown from a promising startup into an industry leader, successfully completing over 500+ projects ranging from commercial warehouses to complex architectural steel structures.
+          </p>
+          <p>
+            Our core strength lies in our dedicated team of professional engineers, modern manufacturing facilities, and an unwavering commitment to quality and safety.
+          </p>
+        </div>
+        <div class="about-img reveal fade-left delay-200">
+          <img src="Data/Pictures/1 (3).jpeg" alt="Company Team">
+        </div>
+      </div>
+      
+      <!-- Mission & Vision -->
+      <div class="mv-grid">
+        <div class="mv-card reveal fade-up delay-100">
+          <h3>Our Mission</h3>
+          <p>To provide top-tier, innovative, and cost-effective steel construction solutions that exceed client expectations while maintaining the highest standards of safety and environmental responsibility.</p>
+        </div>
+        <div class="mv-card reveal fade-up delay-200">
+          <h3>Our Vision</h3>
+          <p>To be the globally recognized pioneer in modern prefabricated engineering and steel fabrication, shaping a sustainable and robust infrastructure for future generations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO Message -->
+  <section style="background-color: var(--bg-dark); color: var(--white);">
+    <div class="container">
+      <div class="about-story" style="grid-template-columns: 1fr 2fr;">
+        <div class="about-img reveal zoom-in">
+          <img src="Data/Pictures/1 (4).jpeg" alt="CEO" style="border: 5px solid var(--primary);">
+        </div>
+        <div class="about-content reveal fade-left delay-200">
+          <i class="fas fa-quote-left" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+          <h3 style="color: var(--white); margin-bottom: 1rem; font-size: 2rem;">A Message from the CEO</h3>
+          <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">
+            "At Build Zone Engineering, our foundation is built on trust, precision, and relentless dedication. Since 2012, we have strived to push the boundaries of what is possible in steel construction. When you choose us, you are not just getting a contractor; you are partnering with a team that treats your project as its own masterpiece."
+          </p>
+          <h4 style="color: var(--secondary);">Liaqat Ali</h4>
+          <span style="color: rgba(255,255,255,0.6);">CEO & Founder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-widget">
+          <a href="index.html" class="footer-logo">
+            <img src="Data/Logo/Logo.png" alt="Build Zone Logo">
+          </a>
+          <p>Premium steel construction and prefabricated engineering solutions delivering excellence globally.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="portfolio.html">Portfolio & Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--primary);"></i> Plot 5 Lahore Avenue, Near Valencia Town, Lahore</li>
+            <li><i class="fas fa-phone-alt" style="margin-right: 10px; color: var(--primary);"></i> 0300 1491901</li>
+            <li><i class="fas fa-envelope" style="margin-right: 10px; color: var(--primary);"></i> info@buildzone.com</li>
+            <li><i class="fas fa-clock" style="margin-right: 10px; color: var(--primary);"></i> Mon-Sat: 9 AM - 9 PM</li>
+          </ul>
+        </div>
+        
+        <div class="footer-widget">
+          <h3>Location</h3>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13615.197368564177!2d74.25414521285642!3d31.378345705353846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190176378e9b05%3A0x6b4f762edc27d498!2sValencia%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Build Zone Engineering (PVT) LTD. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923001491901" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+  <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

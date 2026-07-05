@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Build Zone Engineering</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Data/Pictures/1 (12).jpeg') center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      margin-top: 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    
+    .contact-info {
+      background: var(--bg-dark);
+      color: var(--white);
+      padding: 3rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .contact-info h3 { color: var(--white); margin-bottom: 2rem; }
+    
+    .info-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .info-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 156, 222, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .info-content h4 { color: var(--white); font-size: 1.2rem; margin-bottom: 0.25rem; }
+    .info-content p { color: rgba(255,255,255,0.7); }
+    
+    .contact-form-container {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: 1px solid #e1e1e1;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      background: #fdfdfd;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(0, 156, 222, 0.1);
+    }
+    
+    .form-group.error .form-control {
+      border-color: #ff4757;
+    }
+    
+    .error-text {
+      color: #ff4757;
+      font-size: 0.875rem;
+      margin-top: 5px;
+      display: block;
+    }
+    
+    .map-container {
+      margin-top: 4rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      height: 450px;
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header" class="scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="Data/Logo/Logo.png" alt="Build Zone Engineering Logo">
+      </a>
+      
+      <div class="mobile-toggle" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="color: white;">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header reveal zoom-in">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Let's build something great together.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info Left Side -->
+        <div class="contact-info reveal fade-right">
+          <h3>Get In Touch</h3>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-content">
+              <h4>Head Office</h4>
+              <p>Plot 5 Lahore Avenue,<br>Pine Avenue Road,<br>Near Valencia Town, Lahore</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-content">
+              <h4>Phone Numbers</h4>
+              <p>0300 1491901<br>0300 4194030<br>0345 4533689</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="info-content">
+              <h4>WhatsApp</h4>
+              <p>0300 1491901</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div class="info-content">
+              <h4>Office Hours</h4>
+              <p>Monday - Saturday<br>9:00 AM - 9:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Right Side -->
+        <div class="contact-form-container reveal fade-left delay-200">
+          <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+            <span>Send Message</span>
+            <h2 style="font-size: 2rem;">Drop us a line</h2>
+          </div>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Full Width Google Map -->
+      <div class="map-container reveal fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13615.197368564177!2d74.25414521285642!3d31.378345705353846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190176378e9b05%3A0x6b4f762edc27d498!2sValencia%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-widget">
+          <a href="index.html" class="footer-logo"><img src="Data/Logo/Logo.png" alt="Build Zone Logo"></a>
+          <p>Premium steel construction and prefabricated engineering solutions delivering excellence globally.</p>
+        </div>
+        <div class="footer-widget">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Build Zone Engineering (PVT) LTD. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/923001491901" target="_blank" class="floating-wa"><i class="fab fa-whatsapp"></i></a>
+  <div id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
