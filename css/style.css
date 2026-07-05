@@ -237,15 +237,29 @@ header.scrolled {
   align-items: center;
 }
 
+.logo {
+  flex: 1;
+}
+
 .logo img {
   height: 60px;
   transition: var(--transition);
 }
 
 .nav-menu {
+  flex: 2;
   display: flex;
+  justify-content: center;
   gap: 2.5rem;
   align-items: center;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-menu a {

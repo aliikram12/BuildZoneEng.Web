@@ -60,6 +60,10 @@
     margin: 0 auto;
   }
 
+  .get-quote-btn {
+    display: none;
+  }
+
   .services-grid, 
   .features-grid,
   .portfolio-grid {
