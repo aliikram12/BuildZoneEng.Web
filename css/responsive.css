@@ -48,6 +48,10 @@
   .process-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  
+  .process-step::after {
+    display: none;
+  }
 }
 
 /* Mobile Landscape & Large Phones (768px and down) */
@@ -88,6 +92,10 @@
   .hero p { font-size: 1rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .glass-card { padding: 1.5rem; }
+  
+  .contact-info {
+    padding: 1.5rem !important;
+  }
   
   .floating-wa {
     width: 50px;
