@@ -42,7 +42,10 @@
 
   /* Adjust grid layouts for specific pages */
   .services-grid, 
-  .features-grid {
+  .features-grid,
+  .stats-container,
+  .qa-grid,
+  .process-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -66,7 +69,10 @@
 
   .services-grid, 
   .features-grid,
-  .portfolio-grid {
+  .portfolio-grid,
+  .stats-container,
+  .qa-grid,
+  .process-grid {
     grid-template-columns: 1fr !important;
   }
 
